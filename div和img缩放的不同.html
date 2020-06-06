@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 
+        用div的情况：
+            1.如果这个图片里还要包含另外一个图片，所以用div
+            2.如果需要一点一点显示，那么用div
+
+        其他情况可以用img，也可以用div，但是用img的好处是等比例缩放，并且不用宽高也有图片宽高
+
+
+     -->
+
+    <style>
+        body{
+            background-color: #000;
+        }
+
+        img{
+            width: 99px;
+        }
+
+        div{
+            width: 99px;
+            height: 22px;
+            background: url(images/key.png) no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/key.png" alt="">
+
+    <div></div>
+</body>
+</html>

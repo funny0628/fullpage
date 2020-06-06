@@ -1,0 +1,221 @@
+/* 
+
+fullpage在展现网页的时候会自动帮我们写的元素包一个div，
+给这个div加弹性布局才能让我们自己写的元素用上弹性布局
+要用子代选择器 
+*/
+.section1>div{
+    display: flex;
+    /* y轴为主轴 */
+    flex-direction: column;
+    /* 主轴排列为space-around */
+    justify-content: space-around;
+    /* 副轴居中 */
+    align-items: center;
+}
+
+
+
+.section1 .text img{
+
+    margin-left: 40px;
+    opacity: .5;
+}
+
+.section1.animation .text img{
+
+    transition: all 1s;
+    margin-left: 0;
+    opacity: 1;
+}
+
+
+/* 第二屏开始 */
+.section2>div{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section2 .shield{
+
+    width: 450px;
+}
+
+
+/* 找到第三个盾牌图片 */
+.section2 .shield img:nth-child(3){
+
+    transform: translate(1000px,800px) rotate(480deg);
+}
+
+.section2.animation .shield img:nth-child(3){
+
+    transition: all 1s;
+    transform: none;
+}
+
+/* 第三屏 */
+.section3>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section3 .circle{
+
+    width: 453px;
+    height: 449px;
+    background: url(../images/circle.png) no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3 .rocket{
+
+    transform: translate(-1000px,500px);
+}
+
+.section3.animation .rocket{
+
+    transition: all 1s;
+    transform: none;
+}
+
+
+/* 第四屏开始 */
+.section4>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section4 .searchBox{
+
+    width: 529px;
+    height: 438px;
+    /* background-color: #f00; */
+}
+
+
+.section4 .search{
+    
+    width: 529px;
+    height: 66px;
+    background: url(../images/search.png) no-repeat;
+    position: relative;
+
+    transform: translateX(-1000px);
+}
+
+.section4 .key{
+    width: 0px;
+    height: 22px;
+    background: url(../images/key.png) no-repeat;
+    position: absolute;
+    left:20px;
+    top:22px;
+}
+
+.section4 .result{
+
+    width: 529px;
+    height: 0;
+    background: url(../images/result.png) no-repeat;
+}
+
+.section4.animation .search{
+
+    transition: all 1s;
+    transform: none;
+}
+
+.section4.animation .key{
+
+    transition: all 1s 1s steps(5);
+    width: 99px;
+}
+
+.section4.animation .result{
+
+    transition: all 1s 2s;
+    height: 372px;
+}
+
+/* 第五屏 */
+.section5>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section5 .browser{
+
+    width: 1004px;
+    flex:1;
+    /* border: 5px solid white; */
+
+    position: relative;
+}
+
+.section5 .toolbar{
+
+    position: absolute;
+}
+
+.section5 .extra{
+
+    position: absolute;
+    right:0;
+    bottom:0;
+}
+
+.border{
+
+    position: absolute;
+    background-color: #fff;
+}
+
+.top,.bottom{
+
+    width: 100%;
+    height: 5px;
+}
+
+.left,.right{
+
+    width: 5px;
+    height: 100%;
+}
+
+.right{
+    right:0;
+    transform: translateY(-1300px);
+}
+
+.bottom{
+    bottom: 0;
+    transform: translateX(1300px);
+}
+
+
+.top{
+    transform: translateX(-1300px);
+}
+
+.left{
+
+    transform: translateY(1300px);
+}
+
+.section5.animation .border{
+
+    transition: all 1s;
+    transform: none;
+}
+
+.section{
+    overflow: hidden;
+}
